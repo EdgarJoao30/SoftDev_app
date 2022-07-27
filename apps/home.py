@@ -17,7 +17,7 @@ def app():
     """
     )
 
-    out_dir = os.path.expanduser('../')
+    out_dir = os.path.expanduser('~/Documents/GitHub/SoftDev_app/')
     droneimg = os.path.join(out_dir, 'test.tif')
 
     m = leafmap.Map(locate_control=True,
