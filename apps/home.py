@@ -3,17 +3,22 @@ import leafmap.foliumap as leafmap
 
 
 def app():
-    st.title("Home")
+    st.title("Study area")
 
     st.markdown(
         """
-    A [streamlit](https://streamlit.io) app template for geospatial applications based on [streamlit-option-menu](https://github.com/victoryhb/streamlit-option-menu). 
-    To create a direct link to a pre-selected menu, add `?page=<app name>` to the URL, e.g., `?page=upload`.
-    https://share.streamlit.io/giswqs/streamlit-template?page=upload
+    A [streamlit](https://streamlit.io) app for: 
+    Identifying and upscaling vegetation endmembers from UAV imagery to estimate 
+    vegetation diversity at larger scale applications.
+
+    The study area is located in the Peruvian Amazon, where drone data was acquired during December 2021.
 
     """
     )
 
-    m = leafmap.Map(locate_control=True)
+    m = leafmap.Map(locate_control=True,
+                    location = [-73.335, -3.862],
+                    zoom_start=14,
+                    )
     m.add_basemap("ROADMAP")
     m.to_streamlit(height=700)
