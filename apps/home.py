@@ -17,7 +17,7 @@ def app():
     )
 
     m = leafmap.Map(locate_control=True,
-                    location = [-73.335, -3.862],
+                    location = [-3.862, -73.335],
                     zoom_start=14,
                     )
     m.add_basemap("ROADMAP")
