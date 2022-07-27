@@ -1,5 +1,6 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
+import os
 
 
 def app():
@@ -16,9 +17,13 @@ def app():
     """
     )
 
+    out_dir = os.path.expanduser('../')
+    droneimg = os.path.join(out_dir, 'test.tif')
+
     m = leafmap.Map(locate_control=True,
                     location = [-3.862, -73.335],
                     zoom_start=14,
                     )
     m.add_basemap("ROADMAP")
+    m.add_raster(droneimg, bands=[4, 3, 2], layer_name='Drone image')
     m.to_streamlit(height=700)
