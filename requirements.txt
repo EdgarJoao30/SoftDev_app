@@ -4,6 +4,7 @@ geopandas
 jupyter-server-proxy
 keplergl
 leafmap
+xarray_leaflet
 localtileserver
 nbserverproxy
 streamlit
