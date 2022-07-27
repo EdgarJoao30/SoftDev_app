@@ -1,8 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload  # import your app modules here
+from apps import home, heatmap, upload, preprocessing  # import your app modules here
 
-st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
+st.set_page_config(page_title="PLUS Software development S22", layout="wide")
 
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
@@ -11,6 +11,7 @@ apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
     {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
+    {"func": preprocessing.app, "title": "Upload", "icon": "clock-history"},
 ]
 
 titles = [app["title"] for app in apps]
