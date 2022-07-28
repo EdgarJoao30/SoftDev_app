@@ -1,7 +1,7 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
-import os
-
+import rasterio
+from matplotlib import pyplot
 
 def app():
     st.title("Study area")
@@ -17,13 +17,17 @@ def app():
     """
     )
 
-    out_dir = os.path.expanduser('~/Documents/GitHub/SoftDev_app/')
-    droneimg = os.path.join(out_dir, 'test.tif')
+    #out_dir = os.path.expanduser('~/Documents/GitHub/SoftDev_app/')
+    #droneimg = os.path.join(out_dir, 'test.tif')
 
     m = leafmap.Map(locate_control=True,
                     location = [-3.862, -73.335],
                     zoom_start=14,
                     )
     m.add_basemap("ROADMAP")
-    m.add_raster(droneimg, bands=[4, 3, 2], layer_name='Drone image')
+    #m.add_raster(droneimg, bands=[4, 3, 2], layer_name='Drone image')
     m.to_streamlit(height=700)
+
+    src = rasterio.open("~/Documents/GitHub/SoftDev_app/test_4326.tif")
+    pyplot.imshow(src.read(1), cmap='pink')
+    pyplot.show()

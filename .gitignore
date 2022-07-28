@@ -132,3 +132,5 @@ dmypy.json
 
 # tiff image
 test.tif
+test_4326.tif
+test.ipynb
