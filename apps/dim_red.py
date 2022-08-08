@@ -13,6 +13,8 @@ def app():
     briefly, MNF transform the bands and orders them based on their signal to noise ratio, 
     which means that th MNF output contains steadily increasing image quality, as oposed to 
     a PCA which is based on variance.
+
+    In the image below we can see the results of the first four MNF components on our image:
     """
     )
 
