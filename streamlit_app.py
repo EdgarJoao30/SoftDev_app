@@ -9,7 +9,7 @@ st.set_page_config(page_title="PLUS Software development S22", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": dim_red.app, "title": "dimensionality reduction", "icon": "map"},
+    {"func": dim_red.app, "title": "Dimensionality reduction", "icon": "map"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
     {"func": preprocessing.app, "title": "Pre-processing", "icon": "clock-history"},
 ]
