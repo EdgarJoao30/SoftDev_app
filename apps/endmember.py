@@ -35,3 +35,19 @@ def app():
 
     image = Image.open('img/mnf_endmember_initial.png')
     st.image(image, caption= 'Endmember selection by FIPPI')
+
+    st.markdown(
+        """
+        As you can see in the graphic above, the automatic endmember selection did not work perfectly. 
+        The only endmember that was selected well is the very dark pixel on the far left of the graph. 
+        This is not surprising, since we are only looking at vegetation surfaces, which is very similar in spectral behavior.
+
+        Nevertheless, we want to try to further improve the selection of endmembers. 
+        To this end, a set of potential endmembers was collected in SNAP for very bright surfaces, 
+        with high values in MNF 1 and medium values in MNF 2 and bright surfaces with high MNF 2 and medium MNF 1 values. 
+        The endmember selection is then improved with the Graham scan, using a convex hull to find the potential endmembers.
+        """
+    )
+
+    image = Image.open('img/mnf_endmember.png')
+    st.image(image, caption= "Endmember selection adjusted by Graham's scan")
