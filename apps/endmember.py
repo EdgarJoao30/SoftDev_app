@@ -26,7 +26,7 @@ def app():
 
     st.markdown(
         """
-        Instead of using the PPI, here we the Fast Iterative Puritz Index (FIPPI) is used. 
+        Instead of using the Pixel Purity Index (PPI), here we used the Fast Iterative Puritz Index (FIPPI). 
         It has several advantages over the PPI, e.g. instead of using randomly generated vectors as initial endmembers, 
         the FIPPI produces an intial set of endmembers to speed up the process and iteratively tries to find the optimal 
         set of potential endmembers.
@@ -38,7 +38,7 @@ def app():
 
     st.markdown(
         """
-        As you can see in the graphic above, the automatic endmember selection did not work perfectly. 
+        As you can see in the image above, the automatic endmember selection did not work perfectly. 
         The only endmember that was selected well is the very dark pixel on the far left of the graph. 
         This is not surprising, since we are only looking at vegetation surfaces, which is very similar in spectral behavior.
 
