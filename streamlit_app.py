@@ -9,9 +9,9 @@ st.set_page_config(page_title="PLUS Software development S22", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": dim_red.app, "title": "Dimensionality reduction", "icon": "map"},
-    {"func": endmember.app, "title": "Endmember extraction", "icon": "cloud-upload"},
-    {"func": upscale.app, "title": "Upscaling", "icon": "clock-history"},
+    {"func": dim_red.app, "title": "Dimensionality reduction", "icon": "aspect-ratio"},
+    {"func": endmember.app, "title": "Endmember extraction", "icon": "check-all"},
+    {"func": upscale.app, "title": "Upscaling", "icon": "cloud-upload"},
 ]
 
 titles = [app["title"] for app in apps]
