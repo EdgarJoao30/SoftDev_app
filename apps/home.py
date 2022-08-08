@@ -1,7 +1,6 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
-import rasterio
-from matplotlib import pyplot
+from PIL import Image
 
 def app():
     st.title("Study area")
@@ -28,6 +27,6 @@ def app():
     #m.add_raster(droneimg, bands=[4, 3, 2], layer_name='Drone image')
     m.to_streamlit(height=700)
 
-    src = rasterio.open("~/Documents/GitHub/SoftDev_app/test_4326.tif")
-    pyplot.imshow(src.read(1), cmap='pink')
-    pyplot.show()
+    image = Image.open('img/ndvi.png')
+
+    st.image(image, caption='NDVI')
