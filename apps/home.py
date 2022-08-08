@@ -27,6 +27,6 @@ def app():
     #m.add_raster(droneimg, bands=[4, 3, 2], layer_name='Drone image')
     m.to_streamlit(height=700)
 
-    image = Image.open('img/ndvi.png')
+    image = Image.open('img/drone_image.png')
 
-    st.image(image, caption='NDVI')
+    st.image(image, caption='Drone image - False color')
