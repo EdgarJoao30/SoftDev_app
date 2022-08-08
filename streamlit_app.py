@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload, preprocessing  # import your app modules here
+from apps import home, dim_red, upload, preprocessing  # import your app modules here
 
 st.set_page_config(page_title="PLUS Software development S22", layout="wide")
 
@@ -9,7 +9,7 @@ st.set_page_config(page_title="PLUS Software development S22", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
+    {"func": dim_red.app, "title": "dimensionality reduction", "icon": "map"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
     {"func": preprocessing.app, "title": "Pre-processing", "icon": "clock-history"},
 ]

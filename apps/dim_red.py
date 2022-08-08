@@ -4,7 +4,7 @@ import leafmap.foliumap as leafmap
 
 def app():
 
-    st.title("Heatmap")
+    st.title("Dimensionality reduction")
 
     filepath = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
     m = leafmap.Map(tiles="stamentoner")

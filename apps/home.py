@@ -3,7 +3,7 @@ import leafmap.foliumap as leafmap
 from PIL import Image
 
 def app():
-    st.title("Study area")
+    st.title("Identifying and upscaling vegetation endmembers from UAV imagery")
 
     st.markdown(
         """
@@ -16,15 +16,11 @@ def app():
     """
     )
 
-    #out_dir = os.path.expanduser('~/Documents/GitHub/SoftDev_app/')
-    #droneimg = os.path.join(out_dir, 'test.tif')
-
     m = leafmap.Map(locate_control=True,
                     location = [-3.862, -73.335],
                     zoom_start=14,
                     )
     m.add_basemap("ROADMAP")
-    #m.add_raster(droneimg, bands=[4, 3, 2], layer_name='Drone image')
     m.to_streamlit(height=700)
 
     image = Image.open('img/drone_image.png')
