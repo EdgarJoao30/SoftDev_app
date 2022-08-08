@@ -1,19 +1,12 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
+from PIL import Image
 
 
 def app():
 
     st.title("Dimensionality reduction")
 
-    filepath = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
-    m = leafmap.Map(tiles="stamentoner")
-    m.add_heatmap(
-        filepath,
-        latitude="latitude",
-        longitude="longitude",
-        value="pop_max",
-        name="Heat map",
-        radius=20,
-    )
-    m.to_streamlit(height=700)
+    image = Image.open('img/mnf_components.png')
+
+    st.image(image, caption='MNF components')
