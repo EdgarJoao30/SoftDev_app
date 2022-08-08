@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, dim_red, endmember, preprocessing  # import your app modules here
+from apps import home, dim_red, endmember, upscale  # import your app modules here
 
 st.set_page_config(page_title="PLUS Software development S22", layout="wide")
 
@@ -11,7 +11,7 @@ apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
     {"func": dim_red.app, "title": "Dimensionality reduction", "icon": "map"},
     {"func": endmember.app, "title": "Endmember extraction", "icon": "cloud-upload"},
-    {"func": preprocessing.app, "title": "Pre-processing", "icon": "clock-history"},
+    {"func": upscale.app, "title": "Upscaling", "icon": "clock-history"},
 ]
 
 titles = [app["title"] for app in apps]
@@ -39,9 +39,9 @@ with st.sidebar:
         """
         This web [app](https://edgarjoao30-softdev-app-streamlit-app-vy1ifg.streamlitapp.com/) is part of the final project for the Software Development Lecture at [PLUS](https://plus.ac.at/)
         
-        Source code: <https://github.com/EdgarJoao30/SoftDev_app>
+        Source code of the app: <https://github.com/EdgarJoao30/SoftDev_app>
 
-        More menu icons: <https://icons.getbootstrap.com>
+        Source code of the processing: <https://github.com/henriDierkes/SoftwareDev_Final>
     """
     )
 
