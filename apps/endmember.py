@@ -33,5 +33,5 @@ def app():
         """
     )
 
-    image = Image.open('img/mnf_endmember_initial')
+    image = Image.open('img/mnf_endmember_initial.png')
     st.image(image, caption= 'Endmember selection by FIPPI')
